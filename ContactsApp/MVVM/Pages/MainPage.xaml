@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:models="clr-namespace:ContactsApp.MVVM.Models" 
+             x:Class="ContactsApp.MVVM.Pages.MainPage" 
+             Title="Contacts">
+
+    <Grid RowDefinitions="Auto,*,Auto" MaximumWidthRequest="512" MinimumHeightRequest="128">
+        <CollectionView x:Name="ContactDisplay" Grid.Row="1" ItemsSource="{Binding Contacts}" SelectionMode="Multiple">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="5">
+                        <HorizontalStackLayout>
+                            <Label Text="{Binding Name}" FontSize="16" Padding="0,0,5,0"/>
+                            <Label Text="{Binding Surname}" FontSize="16"/>
+                            <FlyoutBase.ContextFlyout>
+                                <MenuFlyout>
+                                    <MenuFlyoutItem Text="Remove" Clicked="ContextMenuRemove_Clicked"/>
+                                    <MenuFlyoutItem Text="Modify" Clicked="ContextMenuModify_Clicked"/>
+                                </MenuFlyout>
+                            </FlyoutBase.ContextFlyout>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Grid Grid.Row="2" Padding="10,5" ColumnDefinitions="*,*">
+            <Button Grid.Column="0" Text="Add new" BackgroundColor="Green" Clicked="AddButton_Clicked"/>
+            <Button Grid.Column="1" Text="Remove selected" BackgroundColor="Red" Clicked="RemovalConfirmation"/>
+        </Grid>
+    </Grid>
+</ContentPage>
