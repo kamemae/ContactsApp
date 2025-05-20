@@ -5,28 +5,38 @@
              x:Class="ContactsApp.MVVM.Pages.MainPage" 
              Title="Contacts">
 
-    <Grid RowDefinitions="Auto,*,Auto" MaximumWidthRequest="512" MinimumHeightRequest="128">
-        <CollectionView x:Name="ContactDisplay" Grid.Row="1" ItemsSource="{Binding Contacts}" SelectionMode="Multiple">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add new" Clicked="AddButton_Clicked"/>
+        <ToolbarItem Text="Remove selected" Clicked="RemoveButton_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <VerticalStackLayout MinimumWidthRequest="128" MaximumWidthRequest="255">
+        <SearchBar Placeholder="Search contacts..."  TextChanged="SearchBar_TextChanged" x:Name="Searchprompt"/>
+        <CollectionView x:Name="ContactDisplay" Grid.Row="1" ItemsSource="{Binding FilteredContacts}" SelectionMode="Multiple">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="10" Margin="5">
-                        <HorizontalStackLayout>
-                            <Label Text="{Binding Name}" FontSize="16" Padding="0,0,5,0"/>
-                            <Label Text="{Binding Surname}" FontSize="16"/>
-                            <FlyoutBase.ContextFlyout>
-                                <MenuFlyout>
-                                    <MenuFlyoutItem Text="Remove" Clicked="ContextMenuRemove_Clicked"/>
-                                    <MenuFlyoutItem Text="Modify" Clicked="ContextMenuModify_Clicked"/>
-                                </MenuFlyout>
-                            </FlyoutBase.ContextFlyout>
-                        </HorizontalStackLayout>
-                    </Frame>
+                    <SwipeView>
+                        <SwipeView.LeftItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete" BackgroundColor="Red" Invoked="SwipeItemRemove_Invoked"/>
+                                <SwipeItem Text="Modify" BackgroundColor="Green" Invoked="SwipeItemModify_Invoked"/>
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+                        <Frame Padding="10" Margin="5">
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Name}" FontSize="16" Padding="0,0,5,0"/>
+                                <Label Text="{Binding Surname}" FontSize="16"/>
+                                <FlyoutBase.ContextFlyout>
+                                    <MenuFlyout>
+                                        <MenuFlyoutItem Text="Remove" Clicked="ContextMenuRemove_Clicked"/>
+                                        <MenuFlyoutItem Text="Modify" Clicked="ContextMenuModify_Clicked"/>
+                                    </MenuFlyout>
+                                </FlyoutBase.ContextFlyout>
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </SwipeView>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Grid Grid.Row="2" Padding="10,5" ColumnDefinitions="*,*">
-            <Button Grid.Column="0" Text="Add new" BackgroundColor="Green" Clicked="AddButton_Clicked"/>
-            <Button Grid.Column="1" Text="Remove selected" BackgroundColor="Red" Clicked="RemovalConfirmation"/>
-        </Grid>
-    </Grid>
+    </VerticalStackLayout>
 </ContentPage>

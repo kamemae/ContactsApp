@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\makaron\source\repos\ContactsApp\ContactsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-05-16T19:12:10.286</Modified>
+      <Modified>2025-05-20T15:03:04.620</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\makaron\source\repos\ContactsApp\ContactsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-05-16T18:55:33.492</Modified>
+      <Modified>2025-05-20T14:59:57.848</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\makaron\source\repos\ContactsApp\ContactsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ContactsApp.runtimeconfig.json">
       <PackagePath>ContactsApp.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\makaron\source\repos\ContactsApp\ContactsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ContactsApp.dll">
       <PackagePath>ContactsApp.dll</PackagePath>
-      <Modified>2025-05-16T19:12:09.795</Modified>
+      <Modified>2025-05-20T15:03:04.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\makaron\source\repos\ContactsApp\ContactsApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ContactsApp.exe</PackagePath>
-      <Modified>2025-05-16T19:12:09.802</Modified>
+      <Modified>2025-05-20T15:03:04.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\makaron\source\repos\ContactsApp\ContactsApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -288,7 +288,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\makaron\source\repos\ContactsApp\ContactsApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ContactsApp.deps.json">
       <PackagePath>ContactsApp.deps.json</PackagePath>
-      <Modified>2025-05-16T18:55:33.314</Modified>
+      <Modified>2025-05-20T14:59:57.538</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\makaron\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
